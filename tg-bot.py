@@ -5,7 +5,6 @@ CTF Telegram Bot — CtffTest_bot
 OVERVIEW
 - The bot never discloses flags.
 - It returns the a response irrespective of the message input. However, the bot should not reveal any information related to the attacker unless the attacker proves their identity to the bot.
-Flag10 = CTF{0p3n_S0urc3_1nt3ll1g3nc3}
 """"
 import os, base64
 from dotenv import load_dotenv
