@@ -6,7 +6,7 @@ AGH Service BOT (t.me/CtffTest_bot.):-
 # Please check back regularly for the latest updates and improvements.
 #
 # ⚠️ Reminder: Temporary development configuration/environment files 
-# should not be kept in the repo. Ensure they are deleted to prevent leakage of sensitve information.
+# should not be kept in the repo and its Branches. Ensure they are deleted to prevent leakage of sensitve information.
 
 OVERVIEW
 - The bot NEVER discloses sensitive information.
