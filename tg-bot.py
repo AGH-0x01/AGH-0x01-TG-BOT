@@ -84,6 +84,12 @@ if len(HMAC_KEY_BYTES) < 16:
 # { user_id: {nonce:str, exp:int} }
 pending = {}
 
+def issue_nonce(user_id: int) -> str:
+    n = secrets.token_hex(16)  # 16 bytes → 32 hex chars
+    pending[user_id] = {"nonce": n, "exp": int(time.time()) + NONCE_TTL}
+    return n
+
+
 def main():
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
