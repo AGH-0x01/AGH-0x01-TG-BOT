@@ -90,6 +90,10 @@ def issue_nonce(user_id: int) -> str:
     return n
 
 
+def compute_expected_hmac(nonce: str, user_id: int) -> str:
+    msg = f"{nonce}:{user_id}".encode()
+    return hmac.new(HMAC_KEY_BYTES, msg, hashlib.sha256).hexdigest()
+
 def main():
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
